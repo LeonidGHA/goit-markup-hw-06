@@ -346,6 +346,45 @@ ul {
 	fill: currentColor;
 }
 
+.modal-title {
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 23px;
+	text-align: center;
+	letter-spacing: 0.03em;
+
+	color: var(--title-text-color);
+}
+
+.form {
+	margin-left: auto;
+	margin-right: auto;
+	padding: 40px;
+}
+
+.form-decoration-line {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 28px;
+}
+
+.form-decoration-line label {
+	margin-bottom: 4px;
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 1.16;
+	letter-spacing: 0.01em;
+
+	color: var(--primary-text-color);
+}
+
+.form-decoration-line input {
+	margin 0;
+	padding: 12px 15px;
+	border: 1px solid rgba(33, 33, 33, 0.2);;
+	border-radius: 4px;
+}
+
 /* Преимущества */
 .section.advantage {
 	padding-bottom: 0;
@@ -550,10 +589,8 @@ ul {
 }
 
 .adress-thumb {
-	display: block;
-}
-
-.adress-thumb:not(:last-child) {
+	display: flex;
+	flex-direction: column;
 	margin-right: 70px;
 }
 
@@ -589,10 +626,11 @@ ul {
 
 .join-thumb {
 	display: inline-block;
-	margin-right: auto;
+	margin-right: 70px;
 }
 
 .join-title {
+	display: inline-block;
 	color: var(--primary-bcg-color);
 	font-weight: 700;
 	line-height: 1.14;
@@ -630,6 +668,55 @@ ul {
 .footer-link:hover,
 .footer-link:focus {
 	background-color: var(--accent-color);
+}
+
+.newsletter {
+	display: flex;
+	flex-direction: column;
+}
+
+.newsletter-title {
+	display: inline-block;
+	color: var(--primary-bcg-color);
+	font-weight: 700;
+	line-height: 1.14;
+	text-transform: uppercase;
+	margin-bottom: 20px;
+}
+
+.newsletter-list {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.newsletter-item:not(:last-child) {
+	margin-right: 12px;
+}
+
+.newsletter-btn {
+	padding: 10px 29px;
+
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 1.88;
+	text-align: center;
+	letter-spacing: 0.06em;
+
+	color: var(--tertiary-bck-color);
+	background: var(--accent-color);
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+	border-radius: 4px;
+	border: none;
+
+	cursor: pointer;
+
+	transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.newsletter-btn:hover,
+.newsletter-btn:focus {
+	background-color: #188ce8;
 }
 
 /* Main portfolio.html */

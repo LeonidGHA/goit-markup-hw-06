@@ -370,7 +370,7 @@
 				</div>
 
 				<div class="join-thumb">
-					<h3 class="join-title">присоединяйтесь</h3>
+					<b class="join-title">присоединяйтесь</b>
 					<ul class="footer-soc list">
 						<li class="footer-item">
 							<a class="footer-link" href="" aria-label="instagram" target="_blank" rel="noopener noreferrer">
@@ -402,6 +402,21 @@
 						</li>
 					</ul>
 				</div>
+
+				<div class="newsletter">
+					<b class="newsletter-title">Подпишитесь на рассылку</b>
+					<form name="sign to newsletter">
+						<ul class="newsletter-list list">
+							<li class="newsletter-item">
+								<label for="user_email">E-mail</label>
+								<input type="email" name="email" id="user_email" placeholder="E-mail" />
+							</li>
+							<li class="newsletter-item">
+								<button class="newsletter-btn" type="submit">Подписаться</button>
+							</li>
+						</ul>
+					</form>
+				</div>
 			</div>
 		</footer>
 
@@ -412,6 +427,32 @@
 						<use href="./images/icon-img.svg#icon-close-modal-img"></use>
 					</svg>
 				</button>
+				<b class="modal-title">Оставьте свои данные, мы вам перезвоним</b>
+				<form class="form">
+					<div class="form-decoration-line">
+						<label for="name">Имя</label>
+						<input type="text" name="name" id="name" autofocus />
+					</div>
+					<div class="form-decoration-line">
+						<label for="tel">Телефон</label>
+						<input type="tel" name="tel" id="tel" autofocus />
+					</div>
+					<div class="form-decoration-line">
+						<label for="email">Почта</label>
+						<input type="email" name="email" id="email" autofocus />
+					</div>
+					<div class="form-decoration-comment">
+						<label for="comment">Комментарий</label>
+						<textarea name="comment" id="comment" rows="10" placeholder="Введите текст" autofocus></textarea>
+					</div>
+					<div>
+						<input type="checkbox" name="policy" id="policy" />
+						<label for="policy">
+							Соглашаюсь с рассылкой и принимаю
+							<a href="">Условия договора</a>
+						</label>
+					</div>
+				</form>
 			</div>
 		</div>
 
