@@ -5,6 +5,7 @@
 /* вторичный цвет фона footer main  background: #2F303A; */
 /* третичный цвет фона background: #F5F4FA; */
 /* заливка иконок #AFB1B8; */
+/* active button #188ce8 */
 
 :root {
 	--primary-text-color: #757575;
@@ -16,6 +17,7 @@
 	--tertiary-bck-color: #f5f4fa;
 	--icon-fill-color: #afb1b8;
 	--overlay-bgc-color: rgba(33, 150, 243, 0.9);
+	--hover-btn-bgc-color: #188ce8;
 }
 
 body {
@@ -281,7 +283,7 @@ ul {
 
 .button-studio:hover,
 .button-studio:focus {
-	background-color: #188ce8;
+	background-color: var(--hover-btn-bgc-color);
 }
 
 /* Backdrop */
@@ -334,19 +336,32 @@ ul {
 	width: 30px;
 	height: 30px;
 
-	color: blueviolet;
+	color: #000000;
 	background: #ffffff;
 	border-radius: 50%;
 	border: 1px solid rgba(0, 0, 0, 0.1);
 
 	cursor: pointer;
+
+	transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-btn-image {
 	fill: currentColor;
 }
 
-.modal-title {
+.modal-btn:hover,
+.modal-btn:focus {
+	color: var(--accent-color);
+}
+
+.form {
+	display: flex;
+	flex-direction: column;
+	padding: 40px;
+}
+
+.form-title {
 	font-weight: 700;
 	font-size: 20px;
 	line-height: 23px;
@@ -354,22 +369,17 @@ ul {
 	letter-spacing: 0.03em;
 
 	color: var(--title-text-color);
+	margin-bottom: 12px;
 }
 
-.form {
-	margin-left: auto;
-	margin-right: auto;
-	padding: 40px;
+.label-name {
+	margin-bottom: 4px;
 }
 
 .form-decoration-line {
 	display: flex;
 	flex-direction: column;
-	margin-bottom: 28px;
-}
-
-.form-decoration-line label {
-	margin-bottom: 4px;
+	margin-bottom: 10px;
 	font-weight: 400;
 	font-size: 12px;
 	line-height: 1.16;
@@ -378,11 +388,86 @@ ul {
 	color: var(--primary-text-color);
 }
 
-.form-decoration-line input {
-	margin 0;
+.input-decoration {
+	position: relative;
 	padding: 12px 15px;
-	border: 1px solid rgba(33, 33, 33, 0.2);;
+	border: 1px solid rgba(33, 33, 33, 0.2);
 	border-radius: 4px;
+}
+
+.icon-input-decoration {
+	position: absolute;
+}
+.input-decoration:focus {
+	border: 1px solid var(--accent-color);
+	border-radius: 4px;
+}
+
+.textarea-decoration {
+	font-size: 12px;
+	line-height: 1.16;
+	letter-spacing: 0.01em;
+
+	color: rgba(117, 117, 117, 0.5);
+
+	padding: 12px 15px;
+	border: 1px solid rgba(33, 33, 33, 0.2);
+	border-radius: 4px;
+}
+
+.textarea-decoration:focus {
+	border: 1px solid var(--accent-color);
+	border-radius: 4px;
+}
+
+.form-decoration-line.textarea {
+	margin-bottom: 20px;
+}
+
+.form-decoration-policy {
+	display: flex;
+	margin-bottom: 30px;
+	font-size: 14px;
+	line-height: 1.71;
+	letter-spacing: 0.03em;
+	justify-content: center;
+	align-items: center;
+	color: var(--primary-text-color);
+}
+
+.form-decoration-policy input {
+	margin-right: 8px;
+}
+
+.form-decoration-policy > a {
+	color: var(--accent-color);
+}
+
+.form .form-btn {
+	align-self: center;
+}
+
+.form-btn {
+	padding: 10px 55px;
+
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 1.88;
+	letter-spacing: 0.06em;
+
+	border: none;
+	color: var(--primary-bcg-color);
+	background: var(--accent-color);
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+	border-radius: 4px;
+
+	cursor: pointer;
+	transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-btn:hover,
+.form-btn:focus {
+	background-color: var(--hover-btn-bgc-color);
 }
 
 /* Преимущества */
@@ -626,7 +711,6 @@ ul {
 
 .join-thumb {
 	display: inline-block;
-	margin-right: 70px;
 }
 
 .join-title {
@@ -673,10 +757,11 @@ ul {
 .newsletter {
 	display: flex;
 	flex-direction: column;
+	width: 570px;
+	margin-left: auto;
 }
 
 .newsletter-title {
-	display: inline-block;
 	color: var(--primary-bcg-color);
 	font-weight: 700;
 	line-height: 1.14;
@@ -684,17 +769,29 @@ ul {
 	margin-bottom: 20px;
 }
 
-.newsletter-list {
+.newsletter-form {
 	display: flex;
-	align-items: center;
-	justify-content: center;
 }
 
-.newsletter-item:not(:last-child) {
+.newsletter-form input {
 	margin-right: 12px;
+	padding: 15px 16px;
+	width: 360px;
+
+	font-size: 16px;
+	line-height: 1.25;
+	letter-spacing: 0.03em;
+
+	color: rgba(255, 255, 255, 0.6);
+	background-color: var(--secondary-bcg-color);
+	border: 1px solid rgba(255, 255, 255, 0.3);
+	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+	border-radius: 4px;
 }
 
 .newsletter-btn {
+	display: flex;
+	align-items: center;
 	padding: 10px 29px;
 
 	font-weight: 700;
@@ -714,9 +811,13 @@ ul {
 	transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.newsletter-btn-img {
+	margin-left: 10px;
+}
+
 .newsletter-btn:hover,
 .newsletter-btn:focus {
-	background-color: #188ce8;
+	background-color: var(--hover-btn-bgc-color);
 }
 
 /* Main portfolio.html */
