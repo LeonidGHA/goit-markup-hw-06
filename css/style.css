@@ -438,7 +438,6 @@ ul {
 }
 
 .form-decoration-policy {
-	/* position: relative; */
 	display: flex;
 	margin-bottom: 30px;
 	font-size: 14px;
@@ -488,9 +487,6 @@ ul {
 .checkbox:checked + .icon-checkbox {
 	border-color: var(--accent-color);
 	background-color: var(--accent-color);
-	/* background-image: url(../images/imgportfolio3.jpg);
-	background-size: contain;
-	background-position: center; */
 }
 
 .checkbox:checked + .icon-checkbox .icon-checkbox-check {
